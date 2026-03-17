@@ -6,13 +6,81 @@ html {
 	scroll-behavior: smooth;
 }
 
-.light-mode body { background-color: #ffffff; color: #111111; }
-.light-mode nav { background-color: rgba(255,255,255,0.9); border-color: rgba(0,0,0,0.1); }
-.light-mode nav span, .light-mode nav a, .light-mode nav button { color: #111111 !important; }
-.light-mode nav .text-gymGold { color: #D4A32A !important; }
-.light-mode section.bg-\[\#0a0a0a\], .light-mode section.bg-\[\#050505\], .light-mode section.bg-\[\#0b0b0b\], .light-mode footer { background-color: #f9f9f9; }
-.light-mode .text-white { color: #111111 !important; }
-.light-mode .text-gray-400, .light-mode .text-gray-300, .light-mode .text-\[\#A0A0A0\] { color: #555555 !important; }
-.light-mode .bg-\[\#111111\], .light-mode .bg-\[\#222222\] { background-color: #ffffff; border-color: rgba(0,0,0,0.1); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
-.light-mode input, .light-mode textarea { background-color: #ffffff; color: #111; border-color: #cccccc; }
-.light-mode .hero-gradient-overlay { background: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.8)); }
+/* GLOBAL LIGHT MODE OVERRIDES */
+.light-mode {
+	background-color: #ffffff !important;
+	color: #111111 !important;
+}
+.light-mode body {
+	background-color: #ffffff !important;
+	color: #111111 !important;
+}
+
+/* Force all headings to be dark */
+.light-mode h1,
+.light-mode h2,
+.light-mode h3,
+.light-mode h4 {
+	color: #111111 !important;
+}
+
+/* Force Tailwind white text utilities to be dark */
+.light-mode .text-white,
+.light-mode .text-offWhite {
+	color: #111111 !important;
+}
+
+/* Subtitles and gray text to dark gray */
+.light-mode .text-gray-400,
+.light-mode .text-gray-300,
+.light-mode .text-\[\#A0A0A0\] {
+	color: #4b5563 !important;
+}
+
+/* Preserve Gold Brand Colors */
+.light-mode .text-gymGold {
+	color: #D4A32A !important;
+}
+.light-mode .bg-gymGold {
+	background-color: #D4A32A !important;
+	color: #111111 !important;
+}
+
+/* Backgrounds for Sections */
+.light-mode section.bg-\[\#0a0a0a\],
+.light-mode section.bg-\[\#050505\],
+.light-mode section.bg-\[\#0b0b0b\],
+.light-mode footer {
+	background-color: #f8f9fa !important;
+}
+
+/* Cards and Form Containers */
+.light-mode .bg-\[\#111111\],
+.light-mode .bg-\[\#222222\] {
+	background-color: #ffffff !important;
+	border-color: #e5e7eb !important;
+	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Form Inputs */
+.light-mode input,
+.light-mode textarea {
+	background-color: #f3f4f6 !important;
+	color: #111111 !important;
+	border-color: #d1d5db !important;
+}
+.light-mode input::placeholder,
+.light-mode textarea::placeholder {
+	color: #6b7280 !important;
+}
+
+/* Navbar */
+.light-mode nav {
+	background-color: rgba(255, 255, 255, 0.95) !important;
+	border-color: #e5e7eb !important;
+}
+
+/* Hero Overlay - Allow image to show through slightly */
+.light-mode .hero-gradient-overlay {
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.95)) !important;
+}
