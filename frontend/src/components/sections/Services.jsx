@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import { motion } from "framer-motion";
 import STIcon from "../../assets/icons/ST.png";
 import CFIcon from "../../assets/icons/CF.png";
 import CZIcon from "../../assets/icons/CZ.png";
@@ -40,6 +41,7 @@ const SERVICES = [
 ];
 
 export default function Services() {
+  const MotionArticle = motion.article;
   const [searchTerm, setSearchTerm] = useState("");
 
   const filteredServices = useMemo(() => {
@@ -69,15 +71,19 @@ export default function Services() {
 
         {filteredServices.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {filteredServices.map((service) => (
-              <article
+            {filteredServices.map((service, index) => (
+              <MotionArticle
                 key={service.name}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: index * 0.15 }}
                 className="rounded-2xl border-2 border-gymGold/20 hover:border-gymGold bg-[#111111] p-6 md:p-8 shadow-xl transition-colors"
               >
                 {service.icon}
                 <h3 className="text-xl md:text-2xl font-bold text-white mb-3">{service.name}</h3>
                 <p className="text-sm md:text-base text-gray-400 leading-relaxed">{service.description}</p>
-              </article>
+              </MotionArticle>
             ))}
           </div>
         ) : (

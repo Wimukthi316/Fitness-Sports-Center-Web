@@ -1,10 +1,19 @@
 import aboutImg from "../../assets/about-facility.jpg";
+import { motion } from "framer-motion";
 
 export default function About() {
+  const MotionDiv = motion.div;
+
   return (
     <section className="bg-[#0a0a0a] py-16 px-6 md:py-24 md:px-8" data-purpose="about-section" id="about">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-8 lg:gap-16">
-        <div className="w-full lg:w-1/2">
+        <MotionDiv
+          className="w-full lg:w-1/2"
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+        >
           <h2 className="font-display font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight mb-8">
             WE ARE NOT JUST A GYM. WE ARE A <br />
             <span className="text-gymGold">COMMUNITY.</span>
@@ -81,9 +90,15 @@ export default function About() {
           >
             Meet Our Trainers
           </a>
-        </div>
+        </MotionDiv>
 
-        <div className="w-full lg:w-1/2">
+        <MotionDiv
+          className="w-full lg:w-1/2"
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
           <div className="relative group h-[500px] w-full">
             <img
               alt="Heavy Weights Gym Facility"
@@ -91,7 +106,7 @@ export default function About() {
               src={aboutImg}
             />
           </div>
-        </div>
+        </MotionDiv>
       </div>
     </section>
   );

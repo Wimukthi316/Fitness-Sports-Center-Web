@@ -13,8 +13,6 @@ export default function BlurText({
     <span className={className}>
       {segments.map((segment, index) => {
         const isLast = index === segments.length - 1;
-        const content = animateBy === "words" && !isLast ? `${segment} ` : segment;
-
         return (
           <MotionSpan
             key={`${segment}-${index}`}
@@ -25,9 +23,9 @@ export default function BlurText({
               delay: delay + index * 0.08,
               ease: [0.22, 1, 0.36, 1],
             }}
-            className="inline-block will-change-[filter,opacity]"
+            className={`inline-block will-change-[filter,opacity] ${!isLast ? "mr-3 md:mr-4 lg:mr-5" : ""}`}
           >
-            {content}
+            {segment}
           </MotionSpan>
         );
       })}
