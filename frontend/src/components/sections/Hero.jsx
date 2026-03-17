@@ -16,8 +16,8 @@ export default function Hero() {
         <div className="absolute inset-0 hero-gradient-overlay"></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 className="font-display text-5xl md:text-8xl font-bold tracking-tight mb-6 leading-none">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center justify-center">
+        <h1 className="font-display text-5xl md:text-8xl font-bold tracking-tight mb-6 leading-none text-white text-center">
           FORGE YOUR LEGACY.
           <br />
           <span className="text-gymGold">BUILD YOUR ULTIMATE PHYSIQUE.</span>
@@ -43,7 +43,7 @@ export default function Hero() {
           </a>
         </div>
 
-        <div className="grid grid-cols-2 gap-8 md:flex md:justify-center md:items-center md:space-x-12 opacity-80" data-purpose="trust-badges">
+        <div className="grid grid-cols-2 justify-items-center items-center gap-8 md:flex md:justify-center md:items-center md:space-x-12 opacity-80" data-purpose="trust-badges">
           <div className="flex items-center space-x-3">
             <svg className="w-8 h-8 text-gymGold" fill="currentColor" viewBox="0 0 20 20">
               <path
