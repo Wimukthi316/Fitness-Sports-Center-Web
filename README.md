@@ -4,13 +4,8 @@
 
 **A production-ready promotional web app for a local fitness brand, built as part of a Web Development Internship Evaluation.**
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Azure%20Static%20Web%20Apps-0078D4?style=flat-square&logo=microsoftazure&logoColor=white)](https://kind-beach-0ca5a7e00.4.azurestaticapps.net/)
-[![Figma Design](https://img.shields.io/badge/UI%2FUX%20Design-Figma-F24E1E?style=flat-square&logo=figma&logoColor=white)](https://www.figma.com/design/tJrNmLRhrQ4uS2UBp3YPkV/Untitled?node-id=0-1&t=IbRwhm2hi6X5VnSY-1)
-[![React](https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev/)
-[![Vite](https://img.shields.io/badge/Vite-5-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
-[![Framer Motion](https://img.shields.io/badge/Framer_Motion-latest-EF0078?style=flat-square&logo=framer&logoColor=white)](https://www.framer.com/motion/)
-[![CI/CD](https://img.shields.io/badge/CI%2FCD-GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)](https://github.com/Wimukthi316/Fitness-Sports-Center-Web/actions)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Azure%20Static%20Web%20Apps-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)](https://kind-beach-0ca5a7e00.4.azurestaticapps.net/)
+[![Figma Design](https://img.shields.io/badge/UI%2FUX%20Design-Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)](https://www.figma.com/design/tJrNmLRhrQ4uS2UBp3YPkV/Untitled?node-id=0-1&t=IbRwhm2hi6X5VnSY-1)
 
 </div>
 
