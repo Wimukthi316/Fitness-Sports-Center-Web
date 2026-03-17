@@ -10,32 +10,32 @@ const SERVICES = [
   {
     name: "Strength Training",
     description: "Build raw power with premium free weights, racks, and performance tracking.",
-    icon: <img src={STIcon} alt="Strength Training" className="w-10 h-10 mb-5" />,
+    icon: <img src={STIcon} alt="Strength Training" className="w-8 h-8 md:w-10 md:h-10 mb-4 md:mb-5" />,
   },
   {
     name: "Cardio Zone",
     description: "Boost endurance in a dedicated zone with treadmills, bikes, and rowers.",
-    icon: <img src={CZIcon} alt="Cardio Zone" className="w-10 h-10 mb-5" />,
+    icon: <img src={CZIcon} alt="Cardio Zone" className="w-8 h-8 md:w-10 md:h-10 mb-4 md:mb-5" />,
   },
   {
     name: "Personal Coaching",
     description: "One-on-one programming, form correction, and accountability from experts.",
-    icon: <img src={PCIcon} alt="Personal Coaching" className="w-10 h-10 mb-5" />,
+    icon: <img src={PCIcon} alt="Personal Coaching" className="w-8 h-8 md:w-10 md:h-10 mb-4 md:mb-5" />,
   },
   {
     name: "CrossFit",
     description: "High-intensity functional sessions designed to push your limits safely.",
-    icon: <img src={CFIcon} alt="CrossFit" className="w-10 h-10 mb-5" />,
+    icon: <img src={CFIcon} alt="CrossFit" className="w-8 h-8 md:w-10 md:h-10 mb-4 md:mb-5" />,
   },
   {
     name: "Yoga & Mobility",
     description: "Improve flexibility, recovery, and joint health with guided mobility flows.",
-    icon: <img src={YMIcon} alt="Yoga & Mobility" className="w-10 h-10 mb-5" />,
+    icon: <img src={YMIcon} alt="Yoga & Mobility" className="w-8 h-8 md:w-10 md:h-10 mb-4 md:mb-5" />,
   },
   {
     name: "Boxing",
     description: "Train speed, conditioning, and confidence with pad work and bag drills.",
-    icon: <img src={BoxIcon} alt="Boxing" className="w-10 h-10 mb-5" />,
+    icon: <img src={BoxIcon} alt="Boxing" className="w-8 h-8 md:w-10 md:h-10 mb-4 md:mb-5" />,
   },
 ];
 
