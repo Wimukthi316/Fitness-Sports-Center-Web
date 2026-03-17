@@ -1,3 +1,4 @@
+import { useState } from "react";
 import logoSrc from "../../assets/gym-logo.png";
 
 const NAV_LINKS = [
@@ -8,64 +9,97 @@ const NAV_LINKS = [
 ];
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <nav className="fixed top-0 left-1/2 -translate-x-1/2 z-50 bg-black/50 backdrop-blur-xl border border-white/10 mt-6 mx-auto w-[95%] max-w-7xl rounded-full shadow-2xl transition-all duration-300">
-      <div className="px-8 py-3">
-        <div className="flex justify-between items-center h-16">
+    <>
+      <nav className="fixed top-0 left-1/2 -translate-x-1/2 z-50 bg-black/50 backdrop-blur-xl border border-white/10 mt-4 md:mt-6 mx-auto w-[92%] md:w-[95%] max-w-7xl rounded-full shadow-2xl transition-all duration-300 py-1.5 md:py-3">
+        <div className="px-4 md:px-8">
+          <div className="flex justify-between items-center h-12 md:h-16">
 
-          {/* Logo */}
-          <div className="flex-shrink-0 flex items-center">
-            <img
-              alt="Logo"
-              className="w-12 h-12 rounded-full object-cover"
-              src={logoSrc}
-            />
-            <span className="ml-3 font-display font-black uppercase tracking-tighter flex items-center gap-1.5 text-2xl">
-              <span className="text-gymGold">FITNESS</span>
-              <span className="text-white">SPORTS CENTER</span>
-            </span>
+            {/* Logo */}
+            <div className="flex-shrink-0 flex items-center gap-2">
+              <img
+                alt="Logo"
+                className="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover"
+                src={logoSrc}
+              />
+              <span className="hidden md:flex font-display font-black uppercase tracking-tighter items-center gap-1.5 text-2xl">
+                <span className="text-gymGold">FITNESS</span>
+                <span className="text-white">SPORTS CENTER</span>
+              </span>
+            </div>
+
+            {/* Desktop nav links */}
+            <div className="hidden lg:flex space-x-10 items-center">
+              {NAV_LINKS.map((link) => (
+                <a
+                  key={link.label}
+                  className="relative font-bold uppercase tracking-widest hover:text-gymGold transition-colors group text-sm"
+                  href={link.href}
+                >
+                  {link.label}
+                  <span className="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-gymGold transition-all duration-300 group-hover:w-full group-hover:left-0" />
+                </a>
+              ))}
+            </div>
+
+            {/* CTA button */}
+            <div className="hidden lg:block">
+              <a
+                className="bg-gymGold text-black px-6 rounded-full uppercase text-[10px] hover:bg-yellow-600 btn-transition shadow-lg block py-3 font-extrabold tracking-wide"
+                href="#contact"
+              >
+                Join Now
+              </a>
+            </div>
+
+            {/* Mobile hamburger */}
+            <div className="lg:hidden">
+              <button 
+                className="text-white p-2" 
+                type="button"
+                onClick={() => setIsOpen(!isOpen)}
+              >
+                <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                  />
+                </svg>
+              </button>
+            </div>
+
           </div>
+        </div>
+      </nav>
 
-          {/* Desktop nav links */}
-          <div className="hidden md:flex space-x-10 items-center">
+      {/* Mobile Menu Overlay */}
+      {isOpen && (
+        <div className="fixed inset-0 top-[100px] z-40 bg-black/80 backdrop-blur-lg lg:hidden">
+          <div className="flex flex-col items-center justify-start pt-10 space-y-8">
             {NAV_LINKS.map((link) => (
               <a
                 key={link.label}
-                className="relative font-bold uppercase tracking-widest hover:text-gymGold transition-colors group text-sm"
+                className="text-white font-bold uppercase tracking-widest hover:text-gymGold transition-colors text-lg"
                 href={link.href}
+                onClick={() => setIsOpen(false)}
               >
                 {link.label}
-                <span className="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-gymGold transition-all duration-300 group-hover:w-full group-hover:left-0" />
               </a>
             ))}
-          </div>
-
-          {/* CTA button */}
-          <div className="hidden md:block">
             <a
-              className="bg-gymGold text-black px-6 rounded-full uppercase text-[10px] hover:bg-yellow-600 btn-transition shadow-lg block py-3 font-extrabold tracking-wide"
+              className="bg-gymGold text-black px-8 rounded-full uppercase text-sm hover:bg-yellow-600 btn-transition shadow-lg py-3 font-extrabold tracking-wide"
               href="#contact"
+              onClick={() => setIsOpen(false)}
             >
               Join Now
             </a>
           </div>
-
-          {/* Mobile hamburger */}
-          <div className="md:hidden">
-            <button className="text-white p-2" type="button">
-              <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  d="M4 6h16M4 12h16M4 18h16"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                />
-              </svg>
-            </button>
-          </div>
-
         </div>
-      </div>
-    </nav>
+      )}
+    </>
   );
 }

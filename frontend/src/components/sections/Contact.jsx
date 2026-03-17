@@ -32,16 +32,16 @@ export default function Contact() {
   };
 
   return (
-    <section className="bg-[#0b0b0b] py-24 px-8" data-purpose="contact-section" id="contact">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+    <section className="bg-[#0b0b0b] py-16 px-6 md:py-24 md:px-8" data-purpose="contact-section" id="contact">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
         <div>
           <span className="text-gymGold font-bold uppercase text-sm tracking-widest mb-4 block">GET IN TOUCH</span>
-          <h2 className="font-display font-black text-5xl md:text-6xl leading-tight text-white mb-6 uppercase">
+          <h2 className="font-display font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight text-white mb-6 uppercase">
             READY TO FORGE YOUR
             <br />
             LEGACY?
           </h2>
-          <p className="text-gray-400 text-lg leading-relaxed max-w-xl">
+          <p className="font-sans text-gray-400 text-base md:text-lg leading-relaxed max-w-xl">
             Drop us a message to ask about memberships, personal training, or facilities. Our team will get back to you within 24 hours.
           </p>
           <div className="space-y-6 mt-10">
@@ -60,14 +60,14 @@ export default function Contact() {
           </div>
         </div>
 
-        <form className="rounded-2xl border border-white/10 bg-[#111111] p-8 shadow-2xl" onSubmit={handleSubmit}>
+        <form className="rounded-2xl border border-white/10 bg-[#111111] p-6 md:p-8 shadow-2xl" onSubmit={handleSubmit}>
           <div className="space-y-5">
             <div>
-              <label className="block text-sm font-semibold text-gray-300 mb-2" htmlFor="contact-name">
+              <label className="font-sans block text-sm font-semibold text-gray-300 mb-2" htmlFor="contact-name">
                 Full Name
               </label>
               <input
-                className="w-full rounded-lg border border-white/15 bg-black/60 px-4 py-3 text-white outline-none focus:border-gymGold"
+                className="font-sans w-full rounded-lg border border-white/15 bg-black/60 px-4 py-3 text-white outline-none focus:border-gymGold"
                 id="contact-name"
                 onChange={(event) => setName(event.target.value)}
                 placeholder="Your Name"
@@ -77,11 +77,11 @@ export default function Contact() {
             </div>
 
             <div>
-              <label className="block text-sm font-semibold text-gray-300 mb-2" htmlFor="contact-email">
+              <label className="font-sans block text-sm font-semibold text-gray-300 mb-2" htmlFor="contact-email">
                 Email Address
               </label>
               <input
-                className="w-full rounded-lg border border-white/15 bg-black/60 px-4 py-3 text-white outline-none focus:border-gymGold"
+                className="font-sans w-full rounded-lg border border-white/15 bg-black/60 px-4 py-3 text-white outline-none focus:border-gymGold"
                 id="contact-email"
                 onChange={(event) => setEmail(event.target.value)}
                 placeholder="you@example.com"
@@ -91,11 +91,11 @@ export default function Contact() {
             </div>
 
             <div>
-              <label className="block text-sm font-semibold text-gray-300 mb-2" htmlFor="contact-message">
+              <label className="font-sans block text-sm font-semibold text-gray-300 mb-2" htmlFor="contact-message">
                 Message
               </label>
               <textarea
-                className="w-full rounded-lg border border-white/15 bg-black/60 px-4 py-3 text-white outline-none focus:border-gymGold"
+                className="font-sans w-full rounded-lg border border-white/15 bg-black/60 px-4 py-3 text-white outline-none focus:border-gymGold"
                 id="contact-message"
                 onChange={(event) => setMessage(event.target.value)}
                 placeholder="How can we help?"

@@ -2,17 +2,18 @@ import aboutImg from "../../assets/about-facility.png";
 
 export default function About() {
   return (
-    <section className="bg-[#0a0a0a] py-24 px-8" data-purpose="about-section" id="about">
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+    <section className="bg-[#0a0a0a] py-16 px-6 md:py-24 md:px-8" data-purpose="about-section" id="about">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-8 lg:gap-16">
         <div className="w-full lg:w-1/2">
-          <h2 className="font-display font-black text-5xl md:text-6xl leading-tight mb-8">
-            WE ARE NOT JUST A GYM. WE ARE A <br /><span className="text-gymGold">COMMUNITY.</span>
+          <h2 className="font-display font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight mb-8">
+            WE ARE NOT JUST A GYM. WE ARE A <br />
+            <span className="text-gymGold">COMMUNITY.</span>
           </h2>
-          <p className="text-gray-400 text-lg mb-10 leading-relaxed">
+          <p className="text-gray-400 text-base md:text-lg mb-10 leading-relaxed">
             Founded in 2023, Fitness Sports Center was born from a vision to create more than just a workout space. We've built an ecosystem where luxury meets raw intensity. Our facility is designed for those who demand more from themselves and their environment, providing every tool necessary to redefine what's possible.
           </p>
 
-          <div className="flex flex-wrap gap-4 mb-12">
+          <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4 mb-12">
             <div className="px-4 py-2 rounded-lg flex items-center gap-2 text-sm font-bold text-white shadow-lg bg-[#222222]">
               <svg
                 className="lucide lucide-dumbbell"
