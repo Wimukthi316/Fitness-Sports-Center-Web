@@ -1,14 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{js,jsx}"],
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     extend: {
       colors: {
-        gymGold: '#FFD700',
-        offWhite: '#F5F5F0',
+        gymGold: '#D4A32A',
+        offWhite: '#F2F2F2',
       },
       fontFamily: {
-        display: ['system-ui', 'sans-serif'],
+        display: ['Oswald', 'sans-serif'],
+        sans: ['Inter', 'sans-serif'],
       },
     },
   },

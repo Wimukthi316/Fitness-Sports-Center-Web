@@ -9,7 +9,7 @@ export default function About() {
             WE ARE NOT JUST A GYM. WE ARE A <span className="text-gymGold">COMMUNITY.</span>
           </h2>
           <p className="text-gray-400 text-lg mb-10 leading-relaxed">
-            Founded in 2023, Fitness Sports Center was born from a vision to create more than just a workout space. We&apos;ve built an ecosystem where luxury meets raw intensity. Our facility is designed for those who demand more from themselves and their environment, providing every tool necessary to redefine what&apos;s possible.
+            Founded in 2023, Fitness Sports Center was born from a vision to create more than just a workout space. We've built an ecosystem where luxury meets raw intensity. Our facility is designed for those who demand more from themselves and their environment, providing every tool necessary to redefine what's possible.
           </p>
 
           <div className="flex flex-wrap gap-4 mb-12">
@@ -75,7 +75,7 @@ export default function About() {
           </div>
 
           <a
-            className="inline-block px-10 py-4 border-2 border-gymGold text-gymGold font-bold uppercase tracking-wider rounded-full hover:bg-gymGold hover:text-black btn-transition mt-8"
+            className="font-sans inline-block px-10 py-4 border-2 border-gymGold text-gymGold font-bold uppercase tracking-wider rounded-full hover:bg-gymGold hover:text-black btn-transition mt-8"
             href="#"
           >
             Meet Our Trainers

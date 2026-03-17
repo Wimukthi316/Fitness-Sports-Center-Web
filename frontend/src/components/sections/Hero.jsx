@@ -3,28 +3,28 @@ import heroBg from "../../assets/hero-bg.jpg";
 export default function Hero() {
   return (
     <main
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32"
       data-purpose="hero-banner"
       id="hero"
     >
       <div className="absolute inset-0 z-0">
         <img
           alt="Dark Moody Gym Atmosphere"
-          className="w-full h-full object-cover object-top grayscale opacity-60 scale-105"
+          className="w-full h-full object-cover object-[center_30%] grayscale opacity-60"
           src={heroBg}
         />
         <div className="absolute inset-0 hero-gradient-overlay"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center justify-center">
-        <h1 className="font-display text-5xl md:text-8xl font-bold tracking-tight mb-6 leading-none text-white text-center">
+        <h1 className="font-display text-5xl md:text-7xl lg:text-[5.5rem] font-bold tracking-tight mb-6 leading-none text-white text-center">
           FORGE YOUR LEGACY.
           <br />
           <span className="text-gymGold block mt-2">BUILD YOUR ULTIMATE</span>
           <span className="text-gymGold block">PHYSIQUE.</span>
         </h1>
 
-        <p className="max-w-2xl mx-auto text-lg md:text-xl text-gray-300 mb-10 leading-relaxed">
+        <p className="font-sans max-w-2xl mx-auto text-lg md:text-xl text-gray-300 mb-10 leading-relaxed">
           Experience the pinnacle of high-end fitness. Our elite environment combines premium equipment
           with expert coaching to help you crush your limits and achieve greatness.
         </p>
