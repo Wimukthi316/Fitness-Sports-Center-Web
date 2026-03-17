@@ -10,7 +10,7 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <img
           alt="Dark Moody Gym Atmosphere"
-          className="w-full h-full object-cover grayscale opacity-60 scale-110"
+          className="w-full h-full object-cover object-top grayscale opacity-60 scale-105"
           src={heroBg}
         />
         <div className="absolute inset-0 hero-gradient-overlay"></div>
