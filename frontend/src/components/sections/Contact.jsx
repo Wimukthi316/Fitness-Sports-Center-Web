@@ -6,18 +6,37 @@ export default function Contact() {
   const [message, setMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [successMessage, setSuccessMessage] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
+  const [errors, setErrors] = useState({});
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     setSuccessMessage("");
+    const newErrors = {};
 
-    if (!name.trim() || !email.trim() || !message.trim()) {
-      setErrorMessage("All fields are required.");
+    // Validate name
+    if (!name.trim() || name.trim().length < 2) {
+      newErrors.name = "Name must be at least 2 characters.";
+    }
+
+    // Validate email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email.trim() || !emailRegex.test(email.trim())) {
+      newErrors.email = "Please enter a valid email address.";
+    }
+
+    // Validate message
+    if (!message.trim() || message.trim().length < 10) {
+      newErrors.message = "Message must be at least 10 characters.";
+    }
+
+    // If errors exist, update state and return
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
       return;
     }
 
-    setErrorMessage("");
+    // Clear errors and submit
+    setErrors({});
     setIsSubmitting(true);
 
     await new Promise((resolve) => {
@@ -74,6 +93,7 @@ export default function Contact() {
                 type="text"
                 value={name}
               />
+              {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name}</p>}
             </div>
 
             <div>
@@ -88,6 +108,7 @@ export default function Contact() {
                 type="email"
                 value={email}
               />
+              {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
             </div>
 
             <div>
@@ -102,10 +123,10 @@ export default function Contact() {
                 rows={5}
                 value={message}
               />
+              {errors.message && <p className="text-red-500 text-xs mt-1">{errors.message}</p>}
             </div>
           </div>
 
-          {errorMessage ? <p className="mt-4 text-sm text-red-400">{errorMessage}</p> : null}
           {successMessage ? <p className="mt-4 text-sm text-emerald-400">{successMessage}</p> : null}
 
           <button

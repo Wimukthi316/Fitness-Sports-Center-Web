@@ -50,8 +50,9 @@ html {
 .light-mode section.bg-\[\#0a0a0a\],
 .light-mode section.bg-\[\#050505\],
 .light-mode section.bg-\[\#0b0b0b\],
+.light-mode section.bg-black,
 .light-mode footer {
-	background-color: #f8f9fa !important;
+    background-color: #f8f9fa !important;
 }
 
 /* Cards and Form Containers */
@@ -82,5 +83,15 @@ html {
 
 /* Hero Overlay - Allow image to show through slightly */
 .light-mode .hero-gradient-overlay {
-	background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.95)) !important;
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.95)) !important;
+}
+
+/* Increase hero image opacity in light mode */
+.light-mode #hero img {
+	opacity: 0.85 !important;
+}
+
+/* Fix invisible text on outline buttons during hover */
+.light-mode .hover\:text-black:hover {
+	color: #111111 !important;
 }
