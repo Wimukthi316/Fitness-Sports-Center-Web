@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="bg-black min-h-screen text-offWhite font-sans">
       <Navbar />
-      <main className="pt-20">
+      <main>
         <Hero />
         <About />
         <Services />

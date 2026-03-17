@@ -1,6 +1,11 @@
 import logoSrc from "../../assets/gym-logo.png";
 
-const NAV_LINKS = ['Home', 'About', 'Services', 'Contact'];
+const NAV_LINKS = [
+  { label: 'Home', href: '#hero' },
+  { label: 'About', href: '#about' },
+  { label: 'Services', href: '#services' },
+  { label: 'Contact', href: '#contact' },
+];
 
 export default function Navbar() {
   return (
@@ -23,13 +28,13 @@ export default function Navbar() {
 
           {/* Desktop nav links */}
           <div className="hidden md:flex space-x-10 items-center">
-            {NAV_LINKS.map((label) => (
+            {NAV_LINKS.map((link) => (
               <a
-                key={label}
+                key={link.label}
                 className="relative font-bold uppercase tracking-widest hover:text-gymGold transition-colors group text-sm"
-                href="#"
+                href={link.href}
               >
-                {label}
+                {link.label}
                 <span className="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-gymGold transition-all duration-300 group-hover:w-full group-hover:left-0" />
               </a>
             ))}
@@ -39,7 +44,7 @@ export default function Navbar() {
           <div className="hidden md:block">
             <a
               className="bg-gymGold text-black px-6 rounded-full uppercase text-[10px] hover:bg-yellow-600 btn-transition shadow-lg block py-3 font-extrabold tracking-wide"
-              href="#"
+              href="#contact"
             >
               Join Now
             </a>
