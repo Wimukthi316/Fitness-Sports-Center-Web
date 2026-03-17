@@ -5,3 +5,14 @@
 html {
 	scroll-behavior: smooth;
 }
+
+.light-mode body { background-color: #ffffff; color: #111111; }
+.light-mode nav { background-color: rgba(255,255,255,0.9); border-color: rgba(0,0,0,0.1); }
+.light-mode nav span, .light-mode nav a, .light-mode nav button { color: #111111 !important; }
+.light-mode nav .text-gymGold { color: #D4A32A !important; }
+.light-mode section.bg-\[\#0a0a0a\], .light-mode section.bg-\[\#050505\], .light-mode section.bg-\[\#0b0b0b\], .light-mode footer { background-color: #f9f9f9; }
+.light-mode .text-white { color: #111111 !important; }
+.light-mode .text-gray-400, .light-mode .text-gray-300, .light-mode .text-\[\#A0A0A0\] { color: #555555 !important; }
+.light-mode .bg-\[\#111111\], .light-mode .bg-\[\#222222\] { background-color: #ffffff; border-color: rgba(0,0,0,0.1); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
+.light-mode input, .light-mode textarea { background-color: #ffffff; color: #111; border-color: #cccccc; }
+.light-mode .hero-gradient-overlay { background: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.8)); }
