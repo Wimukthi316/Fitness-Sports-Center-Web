@@ -1,4 +1,4 @@
-import logoSrc from '../../assets/logo.png';
+import logoSrc from "../../assets/gym-logo.png";
 
 const NAV_LINKS = ['Home', 'About', 'Services', 'Contact'];
 
