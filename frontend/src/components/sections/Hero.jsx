@@ -20,7 +20,8 @@ export default function Hero() {
         <h1 className="font-display text-5xl md:text-8xl font-bold tracking-tight mb-6 leading-none text-white text-center">
           FORGE YOUR LEGACY.
           <br />
-          <span className="text-gymGold">BUILD YOUR ULTIMATE PHYSIQUE.</span>
+          <span className="text-gymGold block mt-2">BUILD YOUR ULTIMATE</span>
+          <span className="text-gymGold block">PHYSIQUE.</span>
         </h1>
 
         <p className="max-w-2xl mx-auto text-lg md:text-xl text-gray-300 mb-10 leading-relaxed">
