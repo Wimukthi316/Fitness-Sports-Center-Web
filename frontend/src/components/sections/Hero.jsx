@@ -1,4 +1,5 @@
 import heroBg from "../../assets/hero-bg.jpg";
+import BlurText from "../ui/BlurText";
 
 export default function Hero() {
   return (
@@ -17,11 +18,10 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center justify-center">
-        <h1 className="font-display text-4xl md:text-6xl lg:text-[5.5rem] font-bold tracking-tight mb-6 leading-none text-white text-center">
-          FORGE YOUR LEGACY.
-          <br />
-          <span className="text-gymGold block mt-2">BUILD YOUR ULTIMATE</span>
-          <span className="text-gymGold block">PHYSIQUE.</span>
+        <h1 className="font-display text-4xl md:text-6xl lg:text-[5.5rem] font-bold tracking-tight mb-6 leading-none text-center">
+          <BlurText text="FORGE YOUR LEGACY." delay={1.2} className="block text-white" />
+          <BlurText text="BUILD YOUR ULTIMATE" delay={1.5} className="text-gymGold block mb-2" />
+          <BlurText text="PHYSIQUE." delay={1.9} className="text-gymGold block" />
         </h1>
 
         <p className="font-sans max-w-xl md:max-w-2xl mx-auto text-base md:text-lg lg:text-xl text-gray-300 mb-10 leading-relaxed">
