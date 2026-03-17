@@ -11,7 +11,7 @@
 
 ---
 
-## Overview
+## 📌 Overview
 
 The Fitness Sports Center Web App is a high-impact, conversion-focused promotional website designed to represent a premium fitness brand and drive new member acquisition. It delivers a refined user experience through scroll-triggered animations, responsive layout systems, real-time interactivity, and a fully validated contact pipeline — all deployed on a managed Azure cloud infrastructure with automated CI/CD.
 
@@ -19,7 +19,7 @@ This project was developed under a **Web Development Internship Evaluation** and
 
 ---
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 | Layer | Technology |
 |---|---|
@@ -32,7 +32,7 @@ This project was developed under a **Web Development Internship Evaluation** and
 
 ---
 
-## Core Features
+## ⚙️ Core Features
 
 - **Hero Section** — Bold brand statement with animated headline, primary CTA, and visual hierarchy optimized for conversion.
 - **About Section** — Brand narrative, trust signals, and facility showcase with engaging scroll-reveal transitions.
@@ -41,7 +41,7 @@ This project was developed under a **Web Development Internship Evaluation** and
 
 ---
 
-## Bonus Features
+## 🏆 Bonus Features
 
 The following features exceed the standard evaluation scope and demonstrate advanced frontend engineering:
 
@@ -55,7 +55,7 @@ The following features exceed the standard evaluation scope and demonstrate adva
 
 ---
 
-## Local Development
+## 💻 Local Development
 
 **Prerequisites:** Node.js ≥ 18 and npm installed.
 
@@ -77,7 +77,7 @@ The app will be available at `http://localhost:5173` by default.
 
 ---
 
-## Deployment
+## 🚀 Deployment
 
 This project is continuously deployed via **Azure Static Web Apps** with a GitHub Actions workflow. Every push to the `main` branch triggers an automated build and deploy pipeline — no manual intervention required.
 
@@ -85,7 +85,7 @@ This project is continuously deployed via **Azure Static Web Apps** with a GitHu
 
 ---
 
-## Evaluation Checklist
+## ✅ Evaluation Checklist
 
 | Criterion | Status |
 |---|---|
@@ -98,7 +98,7 @@ This project is continuously deployed via **Azure Static Web Apps** with a GitHu
 
 ---
 
-## Author
+## 👤 Author
 
 **Wimukthi Bandara**
 GitHub: [@Wimukthi316](https://github.com/Wimukthi316)
