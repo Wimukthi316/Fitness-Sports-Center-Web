@@ -29,7 +29,7 @@ export default function Hero() {
           with expert coaching to help you crush your limits and achieve greatness.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20" data-purpose="hero-ctas">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10" data-purpose="hero-ctas">
           <a
             className="w-full sm:w-auto px-10 py-4 bg-gymGold/85 text-black font-extrabold uppercase tracking-wide hover:bg-yellow-600 btn-transition text-center rounded-full backdrop-blur-md"
             href="#"

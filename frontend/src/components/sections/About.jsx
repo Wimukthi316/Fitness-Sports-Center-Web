@@ -6,7 +6,7 @@ export default function About() {
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
         <div className="w-full lg:w-1/2">
           <h2 className="font-display font-black text-5xl md:text-6xl leading-tight mb-8">
-            WE ARE NOT JUST A GYM. WE ARE A <span className="text-gymGold">COMMUNITY.</span>
+            WE ARE NOT JUST A GYM. WE ARE A <br /><span className="text-gymGold">COMMUNITY.</span>
           </h2>
           <p className="text-gray-400 text-lg mb-10 leading-relaxed">
             Founded in 2023, Fitness Sports Center was born from a vision to create more than just a workout space. We've built an ecosystem where luxury meets raw intensity. Our facility is designed for those who demand more from themselves and their environment, providing every tool necessary to redefine what's possible.
