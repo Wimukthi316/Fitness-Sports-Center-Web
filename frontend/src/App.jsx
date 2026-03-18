@@ -3,6 +3,8 @@ import Footer from './components/layout/Footer';
 import Hero from './components/sections/Hero';
 import About from './components/sections/About';
 import Services from './components/sections/Services';
+import Memberships from './components/sections/Memberships';
+import Trainers from './components/sections/Trainers';
 import Contact from './components/sections/Contact';
 import ThemeToggle from './components/common/ThemeToggle';
 
@@ -14,6 +16,8 @@ function App() {
         <Hero />
         <About />
         <Services />
+        <Memberships />
+        <Trainers />
         <Contact />
       </main>
       <Footer />
