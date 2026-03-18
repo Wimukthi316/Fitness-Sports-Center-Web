@@ -10,9 +10,9 @@ import ThemeToggle from './components/common/ThemeToggle';
 
 function App() {
   return (
-    <div className="bg-black min-h-screen text-offWhite font-sans">
+    <div className="bg-black min-h-screen text-offWhite font-sans overflow-x-hidden">
       <Navbar />
-      <main>
+      <main className="overflow-x-hidden">
         <Hero />
         <About />
         <Services />

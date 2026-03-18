@@ -5,14 +5,17 @@ const TRAINERS = [
   {
     name: "ALEX THORNE",
     title: "STRENGTH MASTER",
+    imageUrl: "https://images.unsplash.com/photo-1594381898411-846e7d193883?q=80&w=500&auto=format&fit=crop",
   },
   {
     name: "SARAH CHEN",
     title: "ENDURANCE EXPERT",
+    imageUrl: "https://images.unsplash.com/photo-1641808886171-3d300caed21a?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTA3fHxneW0lMjBnaXJsfGVufDB8fDB8fHww",
   },
   {
     name: "MIKE ROSS",
     title: "MOBILITY COACH",
+    imageUrl: "https://images.unsplash.com/photo-1613685044678-0a9ae422cf5a?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGZpdG5lc3N8ZW58MHx8MHx8fDA%3D",
   },
 ];
 
@@ -37,7 +40,11 @@ export default function Trainers() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: index * 0.12 }}
             >
-              <div className="bg-gray-800 w-32 h-32 rounded-full mx-auto mb-8" aria-hidden="true" />
+              <img
+                alt={trainer.name}
+                className="w-32 h-32 rounded-full object-cover mx-auto mb-8"
+                src={trainer.imageUrl}
+              />
 
               <h3 className="font-display text-center text-white text-2xl md:text-3xl font-bold uppercase tracking-tight mb-2">
                 {trainer.name}
@@ -49,16 +56,20 @@ export default function Trainers() {
 
               <div className="flex items-center justify-center gap-5 text-gymGold">
                 <a
-                  href="#"
+                  href="https://x.com"
                   aria-label={`${trainer.name} Twitter`}
                   className="hover:text-yellow-500 transition-colors"
+                  rel="noopener noreferrer"
+                  target="_blank"
                 >
                   <Twitter className="w-5 h-5" />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.instagram.com/koncepthive/"
                   aria-label={`${trainer.name} Instagram`}
                   className="hover:text-yellow-500 transition-colors"
+                  rel="noopener noreferrer"
+                  target="_blank"
                 >
                   <Instagram className="w-5 h-5" />
                 </a>
