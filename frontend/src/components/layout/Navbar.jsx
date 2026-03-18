@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import logoSrc from "../../assets/gym-logo.png";
 
 const NAV_LINKS = [
@@ -10,10 +10,26 @@ const NAV_LINKS = [
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isLightMode, setIsLightMode] = useState(() => document.documentElement.classList.contains("light-mode"));
+
+  useEffect(() => {
+    const root = document.documentElement;
+    const observer = new MutationObserver(() => {
+      setIsLightMode(root.classList.contains("light-mode"));
+    });
+
+    observer.observe(root, { attributes: true, attributeFilter: ["class"] });
+
+    return () => observer.disconnect();
+  }, []);
+
+  const navTextClass = isLightMode ? "text-slate-900" : "text-white";
+  const mobileMenuBgClass = isLightMode ? "bg-white/95" : "bg-black/90";
+  const navbarBgClass = isLightMode ? "bg-white/90 border-slate-200" : "bg-black/50 border-white/10";
 
   return (
     <>
-      <nav className="fixed top-0 left-1/2 -translate-x-1/2 z-50 bg-black/50 backdrop-blur-xl border border-white/10 mt-4 md:mt-6 mx-auto w-[92%] md:w-[95%] max-w-7xl rounded-full shadow-2xl transition-all duration-300 py-1.5 md:py-3">
+      <nav className={`fixed top-0 left-1/2 -translate-x-1/2 z-50 backdrop-blur-xl border mt-4 md:mt-6 mx-auto w-[92%] md:w-[95%] max-w-7xl rounded-full shadow-2xl transition-all duration-300 py-1.5 md:py-2 lg:py-2.5 ${navbarBgClass}`}>
         <div className="px-4 md:px-8">
           <div className="flex justify-between items-center h-12 md:h-16">
 
@@ -26,7 +42,7 @@ export default function Navbar() {
               />
               <span className="hidden md:flex font-display font-black uppercase tracking-tighter items-center gap-1.5 text-2xl">
                 <span className="text-gymGold">FITNESS</span>
-                <span className="text-white">SPORTS CENTER</span>
+                <span className={navTextClass}>SPORTS CENTER</span>
               </span>
             </div>
 
@@ -35,7 +51,7 @@ export default function Navbar() {
               {NAV_LINKS.map((link) => (
                 <a
                   key={link.label}
-                  className="relative font-bold uppercase tracking-widest hover:text-gymGold transition-colors group text-sm"
+                  className={`relative font-bold uppercase tracking-widest hover:text-gymGold transition-colors group text-sm ${navTextClass}`}
                   href={link.href}
                 >
                   {link.label}
@@ -57,7 +73,7 @@ export default function Navbar() {
             {/* Mobile hamburger */}
             <div className="lg:hidden">
               <button 
-                className="text-white p-2" 
+                className={`p-2 ${navTextClass}`}
                 type="button"
                 onClick={() => setIsOpen(!isOpen)}
               >
@@ -78,12 +94,12 @@ export default function Navbar() {
 
       {/* Mobile Menu Overlay */}
       {isOpen && (
-        <div className="fixed inset-0 top-[100px] z-40 bg-black/80 backdrop-blur-lg lg:hidden">
+        <div className={`fixed inset-x-0 bottom-0 top-[76px] md:top-[104px] z-40 backdrop-blur-lg lg:hidden ${mobileMenuBgClass}`}>
           <div className="flex flex-col items-center justify-start pt-10 space-y-8">
             {NAV_LINKS.map((link) => (
               <a
                 key={link.label}
-                className="text-white font-bold uppercase tracking-widest hover:text-gymGold transition-colors text-lg"
+                className={`font-bold uppercase tracking-widest hover:text-gymGold transition-colors text-lg ${navTextClass}`}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
               >
